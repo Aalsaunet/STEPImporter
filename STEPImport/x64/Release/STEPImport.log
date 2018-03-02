@@ -1,2 +1,8 @@
 ﻿  STEPImport.cpp
-LINK : fatal error LNK1561: entry point must be defined
+     Creating library C:\Repositories\OCAF_experiments\x64\Release\STEPImport.lib and object C:\Repositories\OCAF_experiments\x64\Release\STEPImport.exp
+  Generating code
+  8 of 57 functions (14.0%) were compiled, the rest were copied from previous compilation.
+    1 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  STEPImport.vcxproj -> C:\Repositories\OCAF_experiments\x64\Release\STEPImport.exe
