@@ -93,14 +93,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\OpenCASCADE-7.2.0-vc10-64\qt486-vc10-64\include\QtGui;C:\OpenCASCADE-7.2.0-vc10-64\qt486-vc10-64\include\QtCore;C:\OpenCASCADE-7.2.0-vc10-64\opencascade-7.2.0\src;C:\OpenCASCADE-7.2.0-vc10-64\opencascade-7.2.0\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>A:\OpenCASCADE-7.2.0-vc10-64\qt486-vc10-64\include\QtGui;A:\OpenCASCADE-7.2.0-vc10-64\qt486-vc10-64\include\QtCore;A:\OpenCASCADE-7.2.0-vc10-64\opencascade-7.2.0\src;A:\OpenCASCADE-7.2.0-vc10-64\opencascade-7.2.0\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\OpenCASCADE-7.2.0-vc10-64\qt486-vc10-64\lib;C:\OpenCASCADE-7.2.0-vc10-64\opencascade-7.2.0\win64\vc10\bin;C:\OpenCASCADE-7.2.0-vc10-64\opencascade-7.2.0\win64\vc10\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>A:\OpenCASCADE-7.2.0-vc10-64\qt486-vc10-64\lib;A:\OpenCASCADE-7.2.0-vc10-64\opencascade-7.2.0\win64\vc10\bin;A:\OpenCASCADE-7.2.0-vc10-64\opencascade-7.2.0\win64\vc10\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>QtCore4.lib;QtGui4.lib;TKBin.lib;TKBinL.lib;TKBinTObj.lib;TKBinXCAF.lib;TKBO.lib;TKBool.lib;TKBRep.lib;TKCAF.lib;TKCDF.lib;TKD3DHost.lib;TKDCAF.lib;TKDraw.lib;TKernel.lib;TKFeat.lib;TKFillet.lib;TKG2d.lib;TKG3d.lib;TKGeomAlgo.lib;TKGeomBase.lib;TKHLR.lib;TKIGES.lib;TKIVtk.lib;TKIVtkDraw.lib;TKLCAF.lib;TKMath.lib;TKMesh.lib;TKMeshVS.lib;TKOffset.lib;TKOpenGl.lib;TKPrim.lib;TKQADraw.lib;TKService.lib;TKShHealing.lib;TKStd.lib;TKStdL.lib;TKSTEP.lib;TKSTEP209.lib;TKSTEPAttr.lib;TKSTEPBase.lib;TKSTL.lib;TKTObj.lib;TKTObjDRAW.lib;TKTopAlgo.lib;TKTopTest.lib;TKV3d.lib;TKVCAF.lib;TKViewerTest.lib;TKVRML.lib;TKXCAF.lib;TKXDEDRAW.lib;TKXDEIGES.lib;TKXDESTEP.lib;TKXMesh.lib;TKXml.lib;TKXmlL.lib;TKXmlTObj.lib;TKXmlXCAF.lib;TKXSBase.lib;TKXSDRAW.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
