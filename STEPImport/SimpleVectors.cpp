@@ -16,13 +16,13 @@ Vector3 Vector3::operator-(const Vector3& v) {
 	return result;
 }
 
-bool Vector3::operator==(const Vector3& v) {
+bool Vector3::operator==(const Vector3& v) const {
 	if (this->x == v.x && this->y == v.y && this->z == v.z)
 		return true;
 	return false;
 }
 
-bool Vector3::operator<(const Vector3& v) {
+bool Vector3::operator<(const Vector3& v) const {
 	if (this->x < v.x)
 		return true;
 	else if (this->x > v.y)
@@ -42,10 +42,6 @@ Vector3 Vector3::CrossProduct(Vector3 b) {
 	Vector3 result;
 	result.Set(this->y * b.z - this->z * b.y, this->z * b.x - this->x * b.z, this->x * b.y - this->y * b.x);
 	return result;
-}
-
-bool VectorComparator(Vector3 a, Vector3 b) {
-	return a < b;
 }
 
 //static int InsertIfUnique(std::vector<Vector3> vertexbuffer, Vector3 vertex) {
