@@ -43,3 +43,27 @@ Vector3 Vector3::CrossProduct(Vector3 b) {
 	result.Set(this->y * b.z - this->z * b.y, this->z * b.x - this->x * b.z, this->x * b.y - this->y * b.x);
 	return result;
 }
+
+//static int InsertIfUnique(std::vector<Vector3> vertexbuffer, Vector3 vertex) {
+//
+//	// Search for the vertex using binary search;
+//	int startIndex = 0;
+//	int stopIndex = vertexbuffer.size();
+//
+//	while ((stopIndex - startIndex) > 1) {
+//		int middleIndex = (startIndex + stopIndex) / 2;
+//		Vector3 bufferedVertex = vertexbuffer[middleIndex];
+//
+//		if (vertex == bufferedVertex)
+//			return middleIndex;
+//		else if (vertex > bufferedVertex)
+//			startIndex = middleIndex;
+//		else
+//			stopIndex = middleIndex;
+//	}
+//	
+//	// If we get here, the vertex isn't present in the buffer
+//	//vertexbuffer.in
+//
+//	return 0;
+//}
