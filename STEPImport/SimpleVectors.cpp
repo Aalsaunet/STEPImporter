@@ -25,7 +25,7 @@ bool Vector3::operator==(const Vector3& v) const {
 bool Vector3::operator<(const Vector3& v) const {
 	if (this->x < v.x)
 		return true;
-	else if (this->x > v.y)
+	else if (this->x > v.x)
 		return false;
 	else if (this->y < v.y)
 		return true;
