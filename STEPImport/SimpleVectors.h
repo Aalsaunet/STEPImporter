@@ -1,6 +1,8 @@
 #pragma once
 #include "stdafx.h"
 
+const Standard_Real BOUNDS_OFFSET = 0.01;
+
 struct Vector2 {
 	Standard_Real x, y;
 	Vector2(Standard_Real x, Standard_Real y) : x(x), y(y) {};

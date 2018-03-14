@@ -16,11 +16,23 @@ Vector3 Vector3::operator-(const Vector3& v) {
 	return result;
 }
 
+template <typename T> bool IsInBounds(const T& value, const T& low, const T& high) {
+	return (value > low) && (value < high);
+}
+
 bool Vector3::operator==(const Vector3& v) const {
-	if (this->x == v.x && this->y == v.y && this->z == v.z)
+	if (IsInBounds<Standard_Real>(v.x, this->x - BOUNDS_OFFSET, this->x + BOUNDS_OFFSET)
+		&& IsInBounds<Standard_Real>(v.y, this->y - BOUNDS_OFFSET, this->y + BOUNDS_OFFSET)
+		&& IsInBounds<Standard_Real>(v.z, this->z - BOUNDS_OFFSET, this->z + BOUNDS_OFFSET))
 		return true;
 	return false;
 }
+
+//bool Vector3::operator==(const Vector3& v) const {
+//	if (this->x == v.x && this->y == v.y && this->z == v.z)
+//		return true;
+//	return false;
+//}
 
 bool Vector3::operator<(const Vector3& v) const {
 	if (this->x < v.x)
