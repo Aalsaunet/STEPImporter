@@ -37,6 +37,12 @@ bool Vector3::operator<(const Vector3& v) const {
 		return false;
 }
 
+void Vector3::operator+=(const Vector3& v) {
+	this->x += v.x;
+	this->y += v.y;
+	this->z += v.z;
+}
+
 Vector3 Vector3::CrossProduct(Vector3 b) {
 	// Given vector a and b, their cross product is: (a.y * b.z - a.z * b.y, a.z * b.x - a.x * b.z, a.x * b.y - a.y * b.x)
 	Vector3 result;
@@ -44,26 +50,11 @@ Vector3 Vector3::CrossProduct(Vector3 b) {
 	return result;
 }
 
-//static int InsertIfUnique(std::vector<Vector3> vertexbuffer, Vector3 vertex) {
-//
-//	// Search for the vertex using binary search;
-//	int startIndex = 0;
-//	int stopIndex = vertexbuffer.size();
-//
-//	while ((stopIndex - startIndex) > 1) {
-//		int middleIndex = (startIndex + stopIndex) / 2;
-//		Vector3 bufferedVertex = vertexbuffer[middleIndex];
-//
-//		if (vertex == bufferedVertex)
-//			return middleIndex;
-//		else if (vertex > bufferedVertex)
-//			startIndex = middleIndex;
-//		else
-//			stopIndex = middleIndex;
-//	}
-//	
-//	// If we get here, the vertex isn't present in the buffer
-//	//vertexbuffer.in
-//
-//	return 0;
-//}
+void Vector3::Normalize() {
+	Standard_Real vectorMagnitude = sqrt((this->x * this->x) + (this->y * this->y) + (this->z * this->z));
+	if (vectorMagnitude != 0) {
+		this->x /= vectorMagnitude;
+		this->y /= vectorMagnitude;
+		this->z /= vectorMagnitude;
+	}
+}

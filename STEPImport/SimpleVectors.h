@@ -12,7 +12,9 @@ struct Vector3 {
 	Vector3 operator-(const Vector3& v);
 	bool operator==(const Vector3& v) const;
 	bool operator<(const Vector3& v) const;	
+	void operator+=(const Vector3& v);
 	Vector3 CrossProduct(Vector3 b);
+	void Normalize();
 };
 
 //static int InsertIfUnique(std::vector<Vector3> vertexbuffer, Vector3 vertex);
