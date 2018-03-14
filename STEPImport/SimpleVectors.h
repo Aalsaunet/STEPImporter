@@ -22,4 +22,3 @@ struct Vector3 {
 	Vector3 ReturnNormalizedInstance();
 };
 
-//static int InsertIfUnique(std::vector<Vector3> vertexbuffer, Vector3 vertex);
