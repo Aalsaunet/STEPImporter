@@ -37,17 +37,20 @@ bool Vector3::operator<(const Vector3& v) const {
 		return false;
 }
 
-void Vector3::operator+=(const Vector3& v) {
+Vector3& Vector3::operator+=(const Vector3& v) {
 	this->x += v.x;
 	this->y += v.y;
 	this->z += v.z;
+	return *this;
 }
 
-Vector3 Vector3::CrossProduct(Vector3 b) {
+Vector3 Vector3::CrossProduct(const Vector3& b) const {
 	// Given vector a and b, their cross product is: (a.y * b.z - a.z * b.y, a.z * b.x - a.x * b.z, a.x * b.y - a.y * b.x)
-	Vector3 result;
+	return Vector3(this->y * b.z - this->z * b.y, this->z * b.x - this->x * b.z, this->x * b.y - this->y * b.x);
+	
+	/*Vector3 result;
 	result.Set(this->y * b.z - this->z * b.y, this->z * b.x - this->x * b.z, this->x * b.y - this->y * b.x);
-	return result;
+	return result;*/
 }
 
 void Vector3::Normalize() {
@@ -57,4 +60,14 @@ void Vector3::Normalize() {
 		this->y /= vectorMagnitude;
 		this->z /= vectorMagnitude;
 	}
+}
+
+Vector3 Vector3::ReturnNormalizedInstance() {
+	Standard_Real vectorMagnitude = sqrt((this->x * this->x) + (this->y * this->y) + (this->z * this->z));
+	if (vectorMagnitude == 0) {
+		std::cout << "Vector magnitude is 0" << std::endl;
+		return Vector3(0, 0, 0);
+	}
+		
+	return Vector3(this->x / vectorMagnitude, this->y / vectorMagnitude, this->z / vectorMagnitude);
 }
