@@ -2,13 +2,10 @@
 
 #define STEP_API extern "C" __declspec(dllexport)
 
-STEP_API int Get3DGeometry(const char* filepath, char** geometricalbuffer, char** indexbuffer, int32_t* vertexElements, 
-						   int32_t* normalElements, int32_t* uv2Elements, int32_t* triangleElements);
-
-void MarshalGeometryData(int32_t * vertexElements, int32_t * normalElements, int32_t * uv2Elements, char ** geometricalbuffer, int32_t * triangleElements, char ** indexbuffer);
+STEP_API int ImportSTEPFile(const char* filepath, char** vertexBuffer, int32_t* vertexEntryCount, char** indexbuffer, int32_t* indexCount);
+void MarshalGeometryData(char** vertexBuffer, int32_t* vertexEntryCount, char** indexbuffer, int32_t* indexCount);
 void RetrieveFaces(TopoDS_Shape &shape);
 void RemoveDuplicateVerticesAndUpdateIndices();
-void CalculateSmoothedNormals();
 void ClearGeometryData();
 int testGet3DGeometry();
 int main();
