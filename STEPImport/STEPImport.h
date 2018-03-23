@@ -8,6 +8,7 @@ STEP_API int ProcessSubShape(int32_t subshapeIndex, char** vertexBuffer, int32_t
 void RetrieveFaces(TopoDS_Shape &shape);
 void RemoveDuplicateVerticesAndUpdateIndices();
 void MarshalGeometryData(char** vertexBuffer, int32_t* vertexEntryCount, char** indexbuffer, int32_t* indexCount);
-void ClearGeometryData();
+void ClearSubShapeData();
+STEP_API int ClearStepModelData();
 void TestStepImporter();
 int main();
